@@ -9,7 +9,7 @@ namespace makeBreakFastAsyn.Items
          public static async Task<Bacon> FryBaconAsync(int slices)
         {
             string[] pos = Position.GetPosition();
-            Console.WriteLine(string.Format($"putting {slices} slice{0} of bacon in the pan", slices > 1 ? 's': ' '));
+            Console.WriteLine(string.Format("putting {0} slice{1} of bacon in the pan", slices ,slices > 1 ? 's': ' '));
             Console.WriteLine("cooking first side of bacon...");
             await Task.Delay(3000);
             for (int slice = 0; slice < slices; slice++){
